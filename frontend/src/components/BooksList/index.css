@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+    background-image: url("https://media.istockphoto.com/id/1278721683/photo/young-gorgeous-female-student-standing-next-to-book-shelves-and-searching-for-the-book-for.jpg?s=612x612&w=0&k=20&c=S2zji5V8J72Dt7waQyPC0zyyHUpKg89-KX7HAylbamE=");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.book-list-container {
+    padding: 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.book-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.book-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+}
+
+.book-details {
+    width: 100%;
+}
+
+.book-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.book-author,
+.book-price,
+.book-date {
+    font-size: 15px;
+    color: #555;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.book-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.edit-button,
+.delete-button {
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-button {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.edit-button:hover {
+    background-color: #e6b800;
+}
+
+.delete-button {
+    background-color: #ff5722;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e64a19;
+}
+
+.loading-text,
+.error-text,
+.no-books {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .book-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-item {
+        width: 90%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .book-list {
+        justify-content: center;
+    }
+
+    .book-item {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .book-list {
+        justify-content: flex-start;
+    }
+
+    .book-item {
+        width: 280px;
+    }
+}

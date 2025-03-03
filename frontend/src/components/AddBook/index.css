@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .mg-container{
+    background-image: url("https://media.istockphoto.com/id/1278721683/photo/young-gorgeous-female-student-standing-next-to-book-shelves-and-searching-for-the-book-for.jpg?s=612x612&w=0&k=20&c=S2zji5V8J72Dt7waQyPC0zyyHUpKg89-KX7HAylbamE=");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content:center;
+    
+  }
+  
+  .add-book-container {
+    padding: 50px;
+    background: transparent;
+    box-shadow: 0 0 10px rgb(179, 188, 201);
+    text-align: center;
+    height: 400px;
+
+  }
+  
+
+  .add-book-container h2 {
+    font-size: 24px;
+    color: #cd1d6c;
+    margin-bottom: 20px;
+  }
+
+  .image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  .title{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #91c4f8;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+  }
+  
+  input:focus {
+    border: 1px solid #ff5722;
+  }
+  
+
+  .add-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .add-book-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .add-book-container {
+      max-width: 400px;
+    }
+  }
+  
